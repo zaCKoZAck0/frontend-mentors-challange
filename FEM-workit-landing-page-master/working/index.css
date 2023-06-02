@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf');
+}
+
+body, button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #body, button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #24053E;
+};
+}
+
+.dark-element, .dark-element a {
+    color: white;
+}
+
+.header {
+    position: relative;
+    z-index: 3;
+    padding: 32px 32px;
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding-bottom: 56px;
+    }
+
+    .inner-container {
+        width: 689px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .container {
+        width: 1440px;
+    }
+
+    .inner-container {
+        width: 1114px;
+        margin: 0 auto;
+    }
+}
+
+.green-underline {
+    text-decoration: underline;
+    text-decoration-color: #44FFA1;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+.header-CTA {
+    font-variation-settings: "wght" 700;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #44FFA1;
+}
+
+.header-CTA:hover {
+    color: #44FFA1;
+}
+
+main, footer {
+    position: relative;
+    top: -160px;
+    z-index: 1;
+}
+
+.hero {
+    position: relative;
+    padding-top: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    overflow: hidden;
+    background: #FCF8FF;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #24053E;
+    border-radius: 0 0 80% 80%;
+    transform: scale(2.5);
+    z-index: -1;
+}
+
+.hero-content-box {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 156px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero::after {
+        transform: scaleX(2.1);
+    }
+
+    .hero-content-box {
+        width: 635px;
+        margin-bottom: 203px;
+    }
+
+    .hero::before {
+        background-image: url("./assets/images/bg-pattern-3.svg"),
+        url("./assets/images/bg-pattern-2.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: -45% 30%, 115% 55%;
+        background-size: 40%, auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero::after {
+        transform: scaleX(1.5);
+    }
+
+    .hero::before {
+        background-position: -10% 30%, 103% 55%;
+        background-size: 20%, auto;
+    }
+
+    .hero-content-box {
+        margin-bottom: 326px;
+    }
+}
+
+
+.hero-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 200px;
+    z-index: 10;
+}
+
+.hero-image img {
+    width: 80%;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        top: 220px;
+    }
+
+    .hero-image img {
+        width: 514px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero-image img {
+        width: 767px;
+    }
+}
+
+.features {
+    padding-top: 155px; /* 155 per figma */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: -2;
+    overflow-x: clip;
+    background-color: transparent;
+}
+
+.features::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FCF8FF;
+    border-radius: 0 0 80% 80%;
+    transform: scaleX(3.8);
+    z-index: -1;
+    pointer-events: none
+}
+
+.features-content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    padding: 0 58px; /* takes inner-container in account, achieves 97px space to edge as per Figma */
+    margin-bottom: 71px;
+}
+
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.number-circle {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #584D62;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+@media (min-width: 768px) {
+
+    .features {
+        padding-top: 223px; /* 203 per figma, plus 20px adjustment*/
+    }
+
+    .features::after {
+        transform: scaleX(2.8);
+    }
+
+    .features-content-box {
+        justify-content: center;
+        margin-bottom: 103px;
+    }
+
+    .feature-box {
+        flex-direction: row;
+        align-items: baseline;
+        text-align: left;
+        gap: 32px;
+    }
+
+    .number-circle {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+
+    .features::after {
+        transform: scaleX(1.95);
+    }
+
+    .features {
+        padding-top: 255px; /* 255 per figma */
+    }
+
+    .features-content-box {
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+        padding: 0; /* removing padding applied for mobile */
+        justify-content: space-between;
+        margin-bottom: 171px;
+    }
+
+    .feature-box {
+        flex-direction: column;
+        align-items: center;
+        width: 354px;
+        text-align: center;
+        gap: 56px;
+    }
+}
+
+
+.call-to-action {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 74px;
+}
+
+.founder {
+    width: 281px;
+    height: 281px;
+    z-index: -1;
+    position: relative;
+    top: 50px;
+    margin-top: 50px; /* Plus 50 from top, matches 100px per Figma design */
+}
+
+.call-to-action__box {
+    background: #24053E;
+    width: 95%;
+    margin: 0 auto;
+    padding: 31px;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-springie {
+    display: none;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+button {
+    background: #44FFA1;
+    border: 2px solid transparent;
+    padding: 11px 23px;
+    font-weight: 700;
+    letter-spacing: -0.16px;
+}
+
+@media screen and (min-width: 768px) {
+    .call-to-action {
+        flex-direction: row;
+        margin-top: 245px;
+        padding-right: 80px;
+        margin-bottom: 80px;
+    }
+
+    .founder {
+        position: relative;
+        top: -215px;
+        right: -100px;
+    }
+
+    .call-to-action__box {
+        width: 514px;
+        height: 375px;
+        background: #24053E;
+        margin: 0;
+        padding: 56px;
+        z-index: 1;
+        text-align: left;
+        flex-shrink: 0;
+    }
+
+    .cta-springie {
+        display: block;
+        position: absolute;
+        width: 173px;
+        z-index: 1;
+        bottom: -80px;
+        right: 10px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .call-to-action {
+        margin-bottom: 60px;
+    }
+    .founder {
+        width: 477px;
+        height: 477px;
+        top: -175px;
+        right: -100px;
+    }
+
+    .call-to-action__box {
+        width: 730px;
+        height: 413px;
+        padding: 64px;
+    }
+
+    .cta-springie {
+        width: 173px;
+        bottom: 10px;
+        right: 190px;
+    }
+
+
+    h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    button {
+        letter-spacing: -0.18px;
+        padding: 13px 25px;
+    }
+}
+
+h1, h2, h3, .number-circle {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "wght" 600, "opsz" 144;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 37px;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 28px;
+    }
+}
+
+p, h2 {
+    margin-bottom: 32px;
+}
+
+
+button:hover {
+    background: transparent;
+    color: #44FFA1;
+    border: 2px solid #44FFA1;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.social-box {
+    width: 116px;
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-icons img:hover {
+    filter: brightness(0.1);
+}

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    transition: all;
+    transition-duration: .3s;
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf');
+}
+
+body, button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #24053E;
+}
+
+.dark-element {
+    color: #fff;
+    background-color: #24053E;
+}
+
+.btn-secondary {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.18px;
+    text-decoration: none;
+    color: white;
+    line-height: 32px;
+    border-bottom: 3px solid #44FFA1;
+}
+
+
+
+.btn-secondary:hover {
+    color: #44FFA1;
+}
