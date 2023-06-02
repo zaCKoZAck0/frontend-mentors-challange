@@ -27,7 +27,7 @@ Mobile
 ### Links
 
 - Solution URL: [github](https://github.com/zaCKoZAck0/frontend-mentors-challange/tree/master/qr-code-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://frontend-mentors-challange.vercel.app/qr-code-component-main/index.html)
 
 ## My process
 
