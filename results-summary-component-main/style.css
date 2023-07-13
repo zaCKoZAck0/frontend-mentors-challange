@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --shadow: rgba(61, 108, 236, 0.15);
+    --gradient-1: linear-gradient(180deg, #75F 0%, #6943FF 0.01%, #2F2CE9 100%);
+    --border-radius: 32px;
+    --light-blue: #CAC9FF;
+    --dark-navy: #303B59;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Hanken Grotesk;
+}
+
+.container {
+    box-shadow: 0px 30px 60px 0px var(--shadow);
+    width: 736px;
+    height: 512px;
+    flex-shrink: 0;
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.score-display{
+    text-align: center;
+    width: 50%;
+    background: var(--gradient-1);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-display-heading{
+    color: var(--light-blue);
+    font-size: 24px;
+    font-style: normal;
+    padding-bottom: 35px;
+    font-weight: 700;
+}
+
+.score-display-wheel {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    color: var(--light-blue);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.circle-svg {
+    padding-bottom: 28px;
+}
+
+.score-display-wheel .score{
+    color: white;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 72px;
+}
+
+.score-display-summary{
+    color: white;
+    padding-bottom: 14px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.score-display-detail{
+    padding-left: 54px;
+    padding-right: 54px;
+    color: var(--light-blue);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.score-card{
+    width: 50%;
+    padding-left: 38px;
+    padding-right: 38px;
+        padding-top: 38px;
+}
+
+.score-card-heading{
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 28px;
+    color: var(--dark-navy);
+}
+
+.score-card-score{
+    padding: 16px;
+    border-radius: 12px;
+
+    font-size: 18px;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.score-card-score .score{
+    color: var(--dark-navy);
+}
+
+.score-card-score .score .out-of{
+    opacity: 0.5;
+
+}
+
+.red-score{
+    color: #f55;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #F55;
+}
+
+.yellow-score{
+    color: #FFB21E;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #FFB21E;
+}
+
+.green-score{
+    color: #00BB8F;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #00BB8F;
+}
+
+.blue-score{
+    color: #1125D6;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #1125D6;
+}
+
+.vertically-center{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+button {
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-style: normal;
+    margin-top: 25px;
+    font-weight: 700;
+    color: white;
+    width: 288px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 128px;
+    background: var(--dark-navy);
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--gradient-1);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .container{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+  }
+  .score-display{
+    padding-top: 24px;
+    padding-bottom: 40px;
+    width: 100vw;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+  .score-card{
+    width: 100vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 24px;
+  }
+  button{
+    margin-top: 8px;
+  }
+}
