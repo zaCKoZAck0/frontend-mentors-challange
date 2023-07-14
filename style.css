@@ -17,7 +17,7 @@ h1 {
 ul {
     padding: 10px;
     list-style-type: none;
-      display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
@@ -40,6 +40,10 @@ li {
     padding: 10px;
     border-radius: 10px;
     background-color: #ECF2FF;
+    transition: all 0.3s;
+}
+li:hover{
+    transform: scale(105%);
 }
 
 li:hover{
